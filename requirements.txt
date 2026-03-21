@@ -1,0 +1,7 @@
+wheel
+torch
+loguru
+transformers
+modelscope
+accelerate
+peft
