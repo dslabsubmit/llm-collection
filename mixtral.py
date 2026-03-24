@@ -22,7 +22,6 @@ class Mixtral(LLM):
 
     @cost_time
     def run_model(self, input_text):
-        # reference: https://web.archive.org/web/20231030013339/https://docs.mistral.ai/usage/guardrailing/
         inputs = self.tokenizer(
             "[INST] " + self.system_prompt + "\n" + input_text + " [/INST]",
             return_tensors="pt",
