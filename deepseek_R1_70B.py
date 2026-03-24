@@ -11,7 +11,7 @@ class DeepSeek_R1_70B(LLM):
 
         # Load the model with multi-GPU support and mixed precision
         self.model = AutoModelForCausalLM.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-R1-Distill-Llama-70B/",
+            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B/",
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,  # Use BFloat16 for better performance and memory efficiency
             low_cpu_mem_usage=True,  # Efficiently load large models by reducing CPU memory usage
@@ -19,7 +19,7 @@ class DeepSeek_R1_70B(LLM):
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-R1-Distill-Llama-70B/",
+            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B/",
             model_max_length=self.model.config.max_position_embeddings
         )
 
