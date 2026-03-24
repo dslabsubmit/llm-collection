@@ -11,14 +11,14 @@ class deepseekcoder_v2lite(LLM):
         self.accelerator = Accelerator()
 
         self.model = AutoModelForCausalLM.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct/",
+            "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct/",
             trust_remote_code=True,
             torch_dtype=torch.bfloat16,
             #device_map="auto"
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct/",
+            "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct/",
             trust_remote_code = True
         )
         # 准备模型
