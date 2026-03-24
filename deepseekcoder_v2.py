@@ -10,14 +10,14 @@ class deepseekcoder_v2(LLM):
         from modelscope import AutoTokenizer, Model
 
         self.model = Model.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-Coder-V2-Instruct/",
+            "deepseek-ai/DeepSeek-Coder-V2-Instruct/",
             trust_remote_code=True,
             torch_dtype=torch.float16,
             device_map="auto",
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            "/home/yhr/data/modelscope/hub/deepseek-ai/DeepSeek-Coder-V2-Instruct/"
+            "deepseek-ai/DeepSeek-Coder-V2-Instruct/"
         )
 
     @cost_time
